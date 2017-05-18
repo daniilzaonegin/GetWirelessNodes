@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/prf_database_category_title" >
+    <CheckBoxPreference android:key="save_to_db"
+                        android:title="@string/prf_save_data_to_db_title"
+                        android:defaultValue="true" />
+
+    <EditTextPreference android:key="db_path"
+                        android:title="@string/prf_db_path_title"
+                        android:defaultValue="@string/db_path_default_value"
+                        />
+    <ListPreference android:key="refresh_time"
+                    android:title="@string/prf_refresh_time_title"
+                    android:entries="@array/times"
+                    android:entryValues="@array/times"
+                    android:defaultValue="5"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prf_application_settings" >
+        <ListPreference android:key="nodes_type"
+                        android:title="@string/prf_nodes_type_title"
+                        android:entries="@array/node_type_text"
+                        android:entryValues="@array/node_type_value"
+                        android:defaultValue="3"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
